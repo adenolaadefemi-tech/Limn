@@ -1,144 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title> Limn engine asset store</title>
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
-    
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Limn Engine Asset Store</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Sign-In script kept but not configured; enable only when you have a client ID -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
-<link rel="stylesheet" href="style.css">
 <body>
-    <img class="image" src="Limnengine.jpg" alt="limn engine image">
-    <div class="head">
-        <h1> Limn engine asset store</h1>
-    </div>
-<div class="search-box">
-    <input type="text" placeholder="Search assets...">
-    <button>Search</button>
-</div><br>
-    <nav class="navbar">
-        
-    <div class="nav-links">
-       <button class="butin"> <a href="index.html">Home</a></button>
-       <button class="butin"> <a href="assets.html">Assets</a></button>
-        <button class="butin"><a href="categories.html">Categories</a></button>
-        <button class="butin"><a href="about.html">About</a></button>
-    </div>
-</nav><br><br>
-
- <!--  <div id="g_id_onload"
-         data-client_id="YOUR_CLIENT_ID.apps.googleusercontent.com"
-         data-callback="handleCredentialResponse">
+  <header class="site-header">
+    <div class="brand">
+      <img src="Limnengine.jpg" alt="Limn Engine logo" class="logo" loading="lazy">
+      <h1>Limn Engine Asset Store</h1>
     </div>
 
-    <div class="g_id_signin"
-         data-type="standard"
-         data-size="large"
-         data-theme="outline"
-         data-text="signin_with">
-    </div>
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="assets.html">Assets</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
 
-    <script>
-        function handleCredentialResponse(response) {
-            alert("Google sign-in worked!");
-            console.log(response);
-        }
-    </script> -->
-    <br>
+    <form class="search-form" role="search" action="assets.html" method="get" aria-label="Search assets">
+      <label for="q" class="visually-hidden">Search assets</label>
+      <input id="q" name="q" type="search" placeholder="Search assets..." />
+      <button type="submit" aria-label="Search">Search</button>
+    </form>
+  </header>
 
-<section class="hero">
-
-    <div class="hero-text">
-        <h1>Build Your Next Game<br>With Limn assets</h1>
-
-        <p>
-            Discover high-quality assets for your Limn Engine game projects.
-            Find models, environments, audio, VFX, UI and more.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="assets.html" class="browse-btn">Browse Assets</a>
-            <a href="categories.html" class="category-btn">Explore Categories</a>
+  <main>
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-text">
+        <h2 id="hero-heading">Build Your Next Game With Limn Assets</h2>
+        <p>Discover high-quality assets for your Limn Engine projects: models, environments, audio, VFX, UI and more.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="assets.html">Browse Assets</a>
+          <a class="btn" href="categories.html">Explore Categories</a>
         </div>
-    </div>
+      </div>
 
-    <div class="hero-image">
-        <img src="Limnengine.jpg " alt="Limn Engine assets">
-    </div>
+      <div class="hero-image" aria-hidden="true">
+        <img src="Limnengine.jpg" alt="" loading="lazy">
+      </div>
+    </section>
 
-</section>
-<br>
-<br>
-
-<section class="category">
-    <div class="text">
-       <h2> <a href="categories.html"> categories:</a></h2>
-    </div>
-    <ul>
-        <li> 3D Models</li>
-        <li> 2D assets</li>
-        <li> Environment</li>
-        <li> Backgrounds</li>
+    <section class="categories" aria-labelledby="categories-heading">
+      <h3 id="categories-heading">Categories</h3>
+      <ul class="category-list">
+        <li>3D Models</li>
+        <li>2D Assets</li>
+        <li>Environment</li>
+        <li>Backgrounds</li>
         <li>Characters</li>
-        <li> Audio</li>
+        <li>Audio</li>
         <li>VFX</li>
         <li>UI</li>
-        <li> Tools and plugins</li>
-    </ul>
-</section>
+        <li>Tools & Plugins</li>
+      </ul>
+    </section>
 
-<div >
-    <h2> Featured assets</h2>
-    <p> hand picked assets for your next project</p>
-</div>
+    <section class="featured" aria-labelledby="featured-heading">
+      <h3 id="featured-heading">Featured assets</h3>
+      <p>Hand-picked assets for your next project</p>
 
- <table class="table">
-     <tr>
-         <th> Asset</th>
-         <th> Image</th>
-         <th> Price</th>
-     </tr>
-     <tr>
-         <td> <img src="2Droad.jpg" alt="2d road" class="Images"></td>
-         <td> 2D road for car games </td>
-         <td> Free</td>
-     </tr>
-     <tr>
-         <td> <img src="Caveman.jpg" alt="cave man" class="Images"></td>
-         <td> Cave man character</td>
-         <td> Free</td>
-     </tr>
-     <tr>
-         <td> <img src="Spacecraft.jpg" alt="spacecraft" class="Images"></td>
-         <td> Spacecraft ultra spaceship</td>
-         <td> Free</td>
-     </tr>
-     <tr>
-         
-     </tr>
- </table>
- 
+      <ul class="assets-grid" role="list">
+        <li class="asset-card">
+          <figure>
+            <img src="2Droad.jpg" alt="2D road asset preview" loading="lazy">
+            <figcaption>
+              <strong>2D Road</strong>
+              <span class="muted">— 2D road for car games</span>
+            </figcaption>
+          </figure>
+          <div class="price">Free</div>
+        </li>
 
+        <li class="asset-card">
+          <figure>
+            <img src="Caveman.jpg" alt="Caveman character preview" loading="lazy">
+            <figcaption>
+              <strong>Cave Man</strong>
+              <span class="muted">— Cave man character</span>
+            </figcaption>
+          </figure>
+          <div class="price">Free</div>
+        </li>
 
+        <li class="asset-card">
+          <figure>
+            <img src="Spacecraft.jpg" alt="Spacecraft preview" loading="lazy">
+            <figcaption>
+              <strong>Spacecraft Ultra</strong>
+              <span class="muted">— Sci-fi spaceship model</span>
+            </figcaption>
+          </figure>
+          <div class="price">Free</div>
+        </li>
+      </ul>
+    </section>
+  </main>
 
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Limn Engine Asset Store</p>
+  </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
+  <script>
+    // Small DOM helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // If you enable Google Sign-in, implement handleCredentialResponse and the onload div per Google's docs.
+  </script>
 </body>
 </html>
